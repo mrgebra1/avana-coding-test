@@ -22,9 +22,6 @@ class ExcelValidator
 			for ($i=1; $i < count($dt); $i++) {
 				$error = '';
 
-				echo '<br>';
-				print_r($dt[$i]);
-
 				for ($j=0; $j < count($dt[$i]); $j++) {
 					$cecking_space = substr($dt[0][$j], 0, 1) === '#';
 
@@ -50,8 +47,11 @@ class ExcelValidator
 				}
 			}
 
-			$table = new CliTable;
+			if (! isset($result)) {
+				return 'No Error Found';
+			}
 
+			$table = new CliTable;
 			$table->addField('Row',  0, false, 'red');
 			$table->addField('Error',    1,      false,  'white');
 			$table->injectData($result);
@@ -61,8 +61,6 @@ class ExcelValidator
 		else {
 			return 'Only .xls or .xlsx file allowed ';
 		}
-
-		return 'No Error Found';
 
 	}
 }
