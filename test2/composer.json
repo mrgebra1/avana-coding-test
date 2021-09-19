@@ -1,0 +1,21 @@
+{
+    "name": "abdrahman/excelvalidator",
+    "description": "validate excel file format and data stucture",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdur Rahman",
+            "email": "rahmanjabbar.unix@gmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.18",
+        "jc21/clitable": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExcelValidator\\": "src/"
+        }
+    }
+}
