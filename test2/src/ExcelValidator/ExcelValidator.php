@@ -1,5 +1,5 @@
 <?php 
-namespace ExcelValidator\ExcelValidator;
+namespace ExcelValidator;
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
